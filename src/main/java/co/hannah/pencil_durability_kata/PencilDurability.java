@@ -16,20 +16,23 @@ public class PencilDurability {
 	
 	/* ---POINT DEGRADATION--- */
 	//create pencil's durability value. higher value = more characters written before dull
-	private static int pencilDurability = 5;
 	//each character degrades pencil point. lowercase degrades by 1, capital degrades by 2
 	public static String degrade(String string) {
+		int pencilDurability = 5;
 		char[] charArray = string.toCharArray();
 		for (char eachChar : charArray) {
 			if (Character.isLowerCase(eachChar)) {
-			--pencilDurability;
+				--pencilDurability;
+			} else if (Character.isUpperCase(eachChar)) {
+				--pencilDurability;
+				--pencilDurability;
 			}
 		}
 		return String.valueOf(pencilDurability);
 	}
-	public static void main (String[] args) {
-	System.out.println(degrade("blUe"));
-	}
+	
+	
+	
 	//a dull pencil writes spaces for intended characters
 	
 	/* ---SHARPEN--- */

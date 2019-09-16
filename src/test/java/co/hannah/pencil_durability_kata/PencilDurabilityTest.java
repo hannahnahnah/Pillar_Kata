@@ -25,5 +25,12 @@ public class PencilDurabilityTest {
 		String expected = "1";
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void pencilPointDegradesByTwoWhenUpperCaseLettersAreWritten() {
+		String actual = PencilDurability.degrade("Text");
+		String expected = "0";
+		assertEquals(expected, actual);
+	}
 
 }
