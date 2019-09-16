@@ -18,5 +18,12 @@ public class PencilDurabilityTest {
 		String expected = "She sells sea shells down by the seashore";
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void pencilPointDegradesByOneWhenLowerCaseLettersAreWritten() {
+		String actual = PencilDurability.degrade("text");
+		String expected = "1";
+		assertEquals(expected, actual);
+	}
 
 }
