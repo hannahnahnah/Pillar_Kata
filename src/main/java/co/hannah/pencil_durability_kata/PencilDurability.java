@@ -5,7 +5,14 @@ public class PencilDurability {
 	/* ---WRITE--- */
 	//create pencil
 	//create paper
+	private static StringBuilder paper = new StringBuilder("");
+	
 	//write strings to paper... append previous strings
+	public static String write(String string) {
+		String written = paper.append(string).toString();
+		return written;
+	}
+	
 	
 	/* ---POINT DEGRADATION--- */
 	//create pencil's durability value. higher value = more characters written before dull
